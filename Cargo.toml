@@ -1,0 +1,23 @@
+[package]
+name = "changelint"
+version = "0.1.0"
+edition = "2021"
+description = "Validates a CHANGELOG.md against the Keep a Changelog spec (headings, categories, semver/date ordering, duplicates) and scaffolds a skeleton from git tags"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/changelint"
+readme = "README.md"
+keywords = ["changelog", "keepachangelog", "semver", "cli", "linter"]
+categories = ["command-line-utilities", "development-tools"]
+
+[lib]
+name = "changelint"
+path = "src/lib.rs"
+
+[[bin]]
+name = "changelint"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
